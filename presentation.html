@@ -42,19 +42,80 @@
 			</section>
 			<section>
 				<section>
+					<aside class="notes">
+						Polymer: Everything is elements<br>
+						Polymer is a low level UI library that makes building apps easier.<br>
+						Polymer is a LIBRARY not a FRAMEWORK.<br>
+						They consider the DOM the framework.<br>
+						Return to early days of HTML: UI is made in HTML and manipulated using DOM APIs<br>
+						Polymer team is part of the chrome team. In the past, building frameworks that are above the platform (use the web platform as a rendering layer). 
+					</aside>
 					What is Polymer
+				</section>
+				<section>
+					<aside class="notes">
+						Polymer is a web platform thing (not a chrome thing). Web components are a new standard. 
+					</aside>
+					Polymer is built on Web Components
+				</section>
+				<section>
+					Composable with Shadow DOM.
+					Consumable with HTML 
+				</section>
+				<section>
+					<aside class="notes">
+						Polyfills aren't polymer. They're written by the polymer team to let polymer apps run on other recent browsers.
+					</aside>
+					Polyfills lets this work across a number of browsers
+				</section>
+				<section>
+						Polymer is a thin layer on top of web components. Web components are primative types. Polymer (1) Reduce boilerplate (2) Introduces a declarative syntax 
 				</section>
 			</section>
 			<section>
-				How it works
+				<section>
+					Leveraging Polymer
+				</section>
+				<section>
+					Polymer has a set of Core Elements.
+					Pull down the code for the element you want and import it
+					<pre><code>
+<link rel="import" href="my-button.html">
+					</code></pre>
+				</section>
+				<section>
+					Defining &amp; Composing custom elements super easy: <br>
+					template will capture the element's "view"
+					put a style in the template
+					template is rendered in the Shadow DOM hidden from other elements stopping style code from leaking into other areas of your DOM.
+					Add a script 
+					Polymer comes with two way data binding with mustache syntax.
+					Polymer comes with event binding.
+				</section>
+			</section>
+			<section>
+				What Polymer is good for: 
+				Building apps made of elements.
+				Building elements out of elements
+				Building sets of elements to pass around to folks
 			</section>
 			<section>
 				<section>
 					Material Design
 				</section>
 			</section>
+				<!--DEMO-->
 			<section>
-				Demo
+				<section>
+					<aside class="notes">
+						An open source app built by the google polymer team to test polymer and material design. Was made public at Google IO.
+						<ul>
+							<li>Ink effects on input (sign in page)</li>
+							<li>Polymer Transisitons</li>
+						</ul>
+					</aside>
+					Topeka
+				</section>
 			</section>
 		</div> <!-- end slides -->
 	</div> <!-- end reveal -->
