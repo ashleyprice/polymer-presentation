@@ -15,6 +15,7 @@
 
 	<link rel="icon" href="images/favicon.ico">
 
+	<link rel="stylesheet" href="style/stylesheet/polymer.css" />
 	<link rel="stylesheet" href="reveal/css/reveal.css">
 	<link rel="stylesheet" href="reveal/css/theme/sky.css">
 	<!-- For syntax highlighting -->
@@ -22,7 +23,6 @@
 	<!-- For the slides -->
 	<link rel="stylesheet" href="css/slides.css">
 	<!-- If use the PDF print sheet so students can print slides-->
-
 	<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 	<!--[if lt IE 9]>
@@ -38,7 +38,9 @@
 		<div class="slides">
 			<!-- Opening slide -->
 			<section>
-				Polymer Elements &amp; Material Design
+				<h2>Polymer Elements &amp; Material Design</h2>
+				<p>Presented by</p>
+				<p>Patty Cifra &amp; Ashley Price</p>
 			</section>
 			<section>
 				<section>
@@ -50,19 +52,30 @@
 						Return to early days of HTML: UI is made in HTML and manipulated using DOM APIs<br>
 						Polymer team is part of the chrome team. In the past, building frameworks that are above the platform (use the web platform as a rendering layer). 
 					</aside>
-					What is Polymer
+					<h3>What is Polymer</h3>
+					<img class="logo" src="images/p-logo.svg">
 				</section>
 				<section>
 					<aside class="notes">
-						Polymer is a web platform thing (not a chrome thing). Web components are a new standard. 
+					Polymer is a web platform thing (not a chrome thing). Web components are a new standard. <br>
+					Web Component: they allow us to bundle markup and styles into custom HTML elements<br>
+					working their way through the W3C and landing in browsers as we speak<br>
+					native Web Components I'd recommend using Chrome Canary, since it has the best support
 					</aside>
 					Polymer is built on Web Components
 				</section>
 				<section>
 					<aside class="notes">
+						Polymer (1) Reduce boilerplate (2) Introduces a declarative syntax 
+					</aside>
+				<p>We can think of web components as primative types.</p>
+				<p>Polymer is a thin layer on top of web components.</p>
+				</section>
+				<section>
+					<aside class="notes">
 						Shadow DOM is designed to provide encapsulation by hiding DOM subtrees under shadow roots. It provides a method of establishing and maintaining functional boundaries between DOM trees and how these trees interact with each other within a document, thus enabling better functional encapsulation within the DOM.
 					</aside>
-					Composable with Shadow DOM.
+					Composable with Shadow DOM.<br>
 					Consumable with HTML
 				</section>
 				<section>
@@ -70,43 +83,48 @@
 						Polyfills aren't polymer. They're written by the polymer team to let polymer apps run on other recent browsers.<br>
 						 I wanted a word that meant “replicate an API using JavaScript (or Flash or whatever) if the browser doesn’t have it natively”.
 					</aside>
-					Polyfills lets this work across a number of browsers
-				</section>
-				<section>
-						Polymer is a thin layer on top of web components. Web components are primative types. Polymer (1) Reduce boilerplate (2) Introduces a declarative syntax 
+					<h3>Polyfills</h3>
+					Make it work in the browser of your choice
 				</section>
 			</section>
 			<section>
 				<section>
-					Leveraging Polymer
+					<h3>Leveraging Polymer</h3>
 				</section>
 				<section>
-					Polymer has a set of Core Elements.
-					<a href="http://www.polymer-project.org/components/core-elements/demo.html#core-toolbar">Core Elements Sampler</a>
+					<h3>Core Elements</h3>
+					<p>Polymer has a set of <a href="http://www.polymer-project.org/components/core-elements/demo.html#core-toolbar">Core Elements</a></p>
 					Pull down the code for the element you want and import it
 					<pre><code>
-<link rel="import" href="my-button.html">
+<link rel="import" href="poly-toolbar.html">
 					</code></pre>
 				</section>
 				<section>
-					Defining &amp; Composing custom elements super easy: <br>
+				<h3>Custom Elements</h3>
+					Defining &amp; Composing custom elements super easy
+				</section>
+				<section>
+					<h3>See it</h3>
 					template will capture the element's "view"
 					put a style in the template
 					template is rendered in the Shadow DOM hidden from other elements stopping style code from leaking into other areas of your DOM.
+				</section>
+				<section>
+					<h3>Do things</h3>
 					Add a script 
 					Polymer comes with two way data binding with mustache syntax.
 					Polymer comes with event binding.
 				</section>
 			</section>
 			<section>
-				What Polymer is good for: 
-				Building apps made of elements.
-				Building elements out of elements
-				Building sets of elements to pass around to folks
+				<h3>So what Polymer is good for?</h3>
+				<p>Building apps made of elements.</p>
+				<p>Building elements out of elements.</p>
+				<p>Building sets of elements to pass around to folks.</p>
 			</section>
 			<section>
 				<section>
-					Material Design
+					<h2>Material Design</h2>
 				</section>
 				<section>
 					<aside class="notes">
@@ -124,12 +142,10 @@
 <a href="http://material-design.storage.googleapis.com/videos/animation-responsiveinteraction-inkreactions-touchripplepressandrelease_large_xhdpi.webm" type="video/webm">Surface Reaction</a>
 				</section>
 				<section>
-				<section>
 					<aside notes="class">
 						In addition to ink-like actions on the surface, the material itself can also respond to interaction. The material can lift up when touched or clicked, indicating an active state. The user can generate new or transform existing material upon touch or click, or directly manipulate sheets of material, dragging or flinging them.
 					</aside>
 <a href="http://material-design.storage.googleapis.com/videos/animation-responsive-surfaceresponse-pointorigin-do_example_large_xhdpi.webm" type="video/webm">Material Response</a>
-				</section>
 				</section>
 				<section>
 					<aside notes="class">
@@ -138,6 +154,8 @@
 					</aside>
 <a href="http://material-design.storage.googleapis.com/videos/animation-meaningfultransitions-hierarchicaltiming4do_large_xhdpi.webm" type="video/webm">Hierarchical Timing</a>
 				</section>
+			</section>
+			<section>
 				<section>
 					<aside class="notes">
 						In material design, every pixel drawn by an application resides on a sheet of paper. Paper has a flat background color and can be sized to serve a variety of purposes. A typical layout is composed of multiple sheets of paper.
@@ -153,6 +171,8 @@
 					</a>
 					<img src="http://material-design.storage.googleapis.com/images/components-textfields-singlelinetextfields-textfields_single_08_large_mdpi.png">
 				</section>
+			</section>
+			<section>
 				<section>
 					<aside class="notes">
 						The Paper elements are a set of UI elements that implement the material design system.
