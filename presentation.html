@@ -42,91 +42,91 @@
 				<p>Presented by</p>
 				<p>Patty Cifra &amp; Ashley Price</p>
 			</section>
+			<!-- an overview of the current landscape -->
+			<section>
+				<aside class="notes">
+					<ul>
+						<li>Tooling: preprocessors, JavaScript frameworks, testing tools, etc.<br>
+				Web Components aim reduce complexities by providing a unified way to create new elements that encompass rich functionality without the need for all the extra libraries.<br>
+				Web components are comprised of four different specifications (Custom Elements, Templates, Shadow DOM and HTML imports) which are being fleshed out in the W3C.<br>
+				</aside>
+				<p>Building Apps can require a lot of tooling.</p>
+				<p>Web Components are trying to reduce the complexities of app creation, but their specs are still being fleshed out by the W3C.</p>
+			</section>
 			<section>
 				<section>
 					<aside class="notes">
-						Polymer: Everything is elements<br>
-						Polymer is a low level UI library that makes building apps easier.<br>
-						Polymer is a LIBRARY not a FRAMEWORK.<br>
-						They consider the DOM the framework.<br>
-						Return to early days of HTML: UI is made in HTML and manipulated using DOM APIs<br>
-						Polymer team is part of the chrome team. In the past, building frameworks that are above the platform (use the web platform as a rendering layer). 
+						<ul>
+							<li>To bridge the gap and give developers access to this rich functionality now, Google has created the Polymer library which serves as a set of polyfills to bring the promise of Web Components to you today</li>
+							<li> <b>low level UI library</b> </li>
+							<li>LIBRARY <b>NOT</b> a FRAMEWORK.</li>
+							<li>Consider the DOM the framework.</li>
+							<li>Return to early days of HTML: UI is made in HTML and <b>manipulated using DOM APIs</b></li>
+							<li>Polymer team is part of the chrome team. In the past, building frameworks that are above the platform (use the web platform as a rendering layer).</li>
+							<li>Open communication with the Chrome team means actual platform fixes not patches and workarounds</li>
+						</ul>
 					</aside>
-					<h3>What is Polymer</h3>
+					<h3>"Welcome to the Future"<br>--Polymer</h3>
 					<img class="logo" src="images/p-logo.svg">
 				</section>
 				<section>
 					<aside class="notes">
-					Polymer is a web platform thing (not a chrome thing). Web components are a new standard. <br>
-					Web Component: they allow us to bundle markup and styles into custom HTML elements<br>
-					working their way through the W3C and landing in browsers as we speak<br>
-					native Web Components I'd recommend using Chrome Canary, since it has the best support
-					</aside>
-					Polymer is built on Web Components
-				</section>
-				<section>
-					<aside class="notes">
-						Polymer (1) Reduce boilerplate (2) Introduces a declarative syntax 
-					</aside>
-				<p>We can think of web components as primative types.</p>
-				<p>Polymer is a thin layer on top of web components.</p>
-				</section>
-				<section>
-					<aside class="notes">
-					Shadow DOM is designed to provide encapsulation by hiding DOM subtrees under shadow roots.<br>
-					establishes and maintains functional boundaries between DOM trees <br>
-					thus enabling better functional encapsulation within the DOM.
-					</aside>
-					Composable with Shadow DOM.<br>
-					Consumable with HTML
-				</section>
-				<section>
-					<aside class="notes">
-					Polyfills aren't polymer.<br>
-					They're written by the polymer team to let polymer apps run on other recent browsers.<br>
-					a word that meant “replicate an API using JavaScript (or Flash or whatever) if the browser doesn’t have it natively”.
+					In addition to the Polyfills you're used to use for HTML5/CSS3 (thanks Modernizr),<br>
+					Polymer has polyfills for many of the web technologies required to successfully implement applications with Web Components, including:
 					</aside>
 					<h3>Polyfills</h3>
-					Make it work in the browser of your choice
-				</section>
-			</section>
-			<section>
-				<section>
-					<h3>Leveraging Polymer</h3>
-				</section>
-				<section>
-					<h3>Core Elements</h3>
-					<p>Polymer has a set of <a target="_blank" href="http://www.polymer-project.org/components/core-elements/demo.html#core-toolbar">Core Elements</a></p>
-					Pull down the code for the element you want and import it
-					<pre><code>
-<link rel="import" href="poly-toolbar.html">
-					</code></pre>
-				</section>
-				<section>
-				<h3>Custom Elements</h3>
-					Defining &amp; Composing custom elements super easy
-				</section>
-				<section>
-					<h3>See it</h3>
-					<ol>
-						<li>A Template will capture the element's "view"</li>
-						<li>Put your style code <em>in</em> the template</li>
-						<li>The template is rendered in the Shadow DOM hidden from other elements stopping style code from leaking into other areas of your DOM.</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Do things</h3>
 					<ul>
-						<li>Add a script</li>
-						<li>Polymer comes with two way data binding with mustache syntax.</li>
-						<li>Polymer comes with event binding.</li>
+						<li>HTML imports</li>
+						<li>Custom Elements</li>
+						<li>Shadow DOM</li>
+						<li>Model Driven Views with AngularJS-like data binding</li>
+						<li>Web Animations APIs</li>
+						<li>Pointer Events: unifies events for mouse, touch and pen</li>
+					</ul>
 				</section>
-			</section>
-			<section>
-				<h3>So what Polymer is good for?</h3>
-				<p>Building apps made of elements.</p>
-				<p>Building elements out of elements.</p>
-				<p>Building sets of elements to pass around to folks.</p>
+				<section>
+					<aside class="notes">
+						The unique “messaging” feature that Polymer brings to the table two-way data-binding and changed watchers. <br><br>
+						<a href="http://www.polymer-project.org/articles/communication.html">Data Communcations</a>
+						create web components, declaratively<br>
+						defined using our custom element,  <polymer-element>, and can leverage Polymer’s special features.<br>
+						Two-way data binding<br>
+						Declarative event handing<br>
+						Declarative inheritance<br>
+						Property observation<br>
+						Dynamic templates<br>
+						Touch/gesture support
+					</aside>
+					<h3>Highlights</h3>
+					<ul>
+						<li>Set of <a target="_blank" href="http://www.polymer-project.org/components/core-elements/demo.html#core-toolbar">Core Elements</a></li>
+						<li>Declarative syntax for building custom elements</li>
+						<li>Unique Messaging Features</li>
+					</ul>
+				</section>
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>Not all Polymer.js UI and non-UI Elements are documented.</li>
+							<li>Polymer.js elements as is recommended, you might find yourself with a dependency error, pointing to different version dependencies in the same element. </li>
+							<li>Polymer.js performance on mobile platforms can often be somewhere between frustrating and problematic.<br>
+							Downloading the entire library and polyfills (without gzip’ing) is slow, and you need to download every Polymer Element that you intend to use.<br>
+							Processing the polyfills, libraries, and custom elements appears to be an expensive task on mobile platforms. <br>
+							complex functionality (such as drag-and-drop or rendering into a canvas), you may find that functionality that works fine on the desktop simply does not work properly, or is not yet supported, on the mobile platform.</li>
+							<li>Sometimes when you misspell an attribute name, or just break something related to the core layer itself, you receive a strange error message on your console with two call stacks that you need to investigate to try determine where the problem is.</li>
+						</ul>
+					</aside>
+				<h3>Shortcomings</h3>
+				<ul>
+					<li>Lack of Documentation</li>
+					<li>Dependency errors and version-itis.</li>
+					<li>Problems on mobile platforms.</li>
+					<li>Inadequate or confusing error reporting.</li>
+				</ul>
+				</section>
+				<section>
+					While still in its infancy, it's probably a direction the web will be going in and Polymer is a create place to start building your own custom elements.
+				</section>
 			</section>
 			<section>
 				<section>
