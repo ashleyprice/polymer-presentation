@@ -1,3 +1,13 @@
-.reveal .logo {
-	border: none;
+.reveal {
+	.logo {
+		border: none;
+	}
+	.illustration {
+		float: left;
+		width: 200px;
+	}
+	.illustration-right {
+		float: right;
+		width: 200px;
+	}
 }
